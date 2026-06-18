@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin Portal | Cafe Website Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="admin-body">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Back to website">
+        <img id="adminLogoPreview" class="brand-logo" alt="" />
+        <span>Admin Portal</span>
+      </a>
+      <nav class="nav-links" aria-label="Admin navigation">
+        <a href="index.html">View Website</a>
+      </nav>
+    </header>
+
+    <main class="admin-shell">
+      <section class="admin-header">
+        <p class="section-label">Cafe Content</p>
+        <h1>Edit website information</h1>
+        <p>Changes are saved in this browser. Use export/import when you want to move the content to another device.</p>
+      </section>
+
+      <form id="adminForm" class="admin-form">
+        <section class="admin-panel">
+          <h2>Business Details</h2>
+          <div class="form-grid">
+            <label>
+              Cafe Name
+              <input id="nameInput" type="text" required />
+            </label>
+            <label>
+              Tagline
+              <input id="taglineInput" type="text" />
+            </label>
+            <label class="full">
+              Main Headline
+              <input id="headlineInput" type="text" />
+            </label>
+            <label class="full">
+              About Text
+              <textarea id="aboutInput" rows="4"></textarea>
+            </label>
+          </div>
+        </section>
+
+        <section class="admin-panel">
+          <h2>Logo, Picture & Video</h2>
+          <div class="form-grid">
+            <label>
+              Logo Image
+              <input id="logoInput" type="file" accept="image/*" />
+            </label>
+            <label>
+              Main Picture
+              <input id="heroImageInput" type="file" accept="image/*" />
+            </label>
+            <label class="full">
+              Video URL
+              <input id="videoInput" type="url" placeholder="https://..." />
+            </label>
+            <label class="full">
+              Gallery Pictures
+              <input id="galleryInput" type="file" accept="image/*" multiple />
+            </label>
+          </div>
+        </section>
+
+        <section class="admin-panel">
+          <h2>Menu Categories</h2>
+          <div id="menuEditor" class="editor-list"></div>
+          <button class="button secondary small" type="button" id="addMenuButton">Add Category</button>
+        </section>
+
+        <section class="admin-panel">
+          <h2>Address & Contact</h2>
+          <div class="form-grid">
+            <label class="full">
+              Address
+              <textarea id="addressInput" rows="3"></textarea>
+            </label>
+            <label>
+              Opening Hours
+              <input id="hoursInput" type="text" />
+            </label>
+            <label>
+              Phone Number
+              <input id="phoneInput" type="tel" />
+            </label>
+            <label>
+              WhatsApp Number
+              <input id="whatsappInput" type="tel" />
+            </label>
+            <label>
+              Instagram URL
+              <input id="instagramInput" type="url" />
+            </label>
+            <label>
+              Google Maps Embed URL
+              <input id="mapInput" type="url" />
+            </label>
+          </div>
+        </section>
+
+        <section class="admin-actions">
+          <button class="button primary" type="submit">Save Changes</button>
+          <button class="button ghost dark" type="button" id="resetButton">Reset Demo</button>
+          <button class="button secondary" type="button" id="exportButton">Export Content</button>
+          <label class="button ghost dark file-button">
+            Import Content
+            <input id="importInput" type="file" accept="application/json" />
+          </label>
+        </section>
+      </form>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>
